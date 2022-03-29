@@ -12,7 +12,7 @@ proj_dir=$(pwd)
 # clone openwrt
 cd "$proj_dir"
 rm -rf openwrt
-git clone -b vopenwrt-22.03 https://github.com/openwrt/openwrt.git openwrt
+git clone -b v19.07.7 https://github.com/openwrt/openwrt.git openwrt
 
 # patch openwrt
 cd "$proj_dir/openwrt"
@@ -39,9 +39,9 @@ done
 cd "$proj_dir/openwrt"
 Compile_Date=$(date +%Y%m%d)
 AB_Firmware_Info=package/base-files/files/etc/openwrt_info
-Openwrt_Version="R22.03-${Compile_Date}"
-Owner_Repo="https://github.com/huoyubaba/test-items-22.03"
-TARGET_PROFILE="test-items"
+Openwrt_Version="R19.7.07-${Compile_Date}"
+Owner_Repo="https://github.com/slitaz-cn/dragino2-19.07.7"
+TARGET_PROFILE="dragino2"
 Firmware_Type="bin"
 echo "${Openwrt_Version}" > ${AB_Firmware_Info}
 echo "${Owner_Repo}" >> ${AB_Firmware_Info}
