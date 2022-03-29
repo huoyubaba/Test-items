@@ -39,9 +39,9 @@ done
 cd "$proj_dir/openwrt"
 Compile_Date=$(date +%Y%m%d)
 AB_Firmware_Info=package/base-files/files/etc/openwrt_info
-Openwrt_Version="R19.7.07-${Compile_Date}"
-Owner_Repo="https://github.com/slitaz-cn/dragino2-19.07.7"
-TARGET_PROFILE="dragino2"
+Openwrt_Version="R22.03-${Compile_Date}"
+Owner_Repo="https://github.com/huoyubaba/test-items-22.03"
+TARGET_PROFILE="test-items"
 Firmware_Type="bin"
 echo "${Openwrt_Version}" > ${AB_Firmware_Info}
 echo "${Owner_Repo}" >> ${AB_Firmware_Info}
