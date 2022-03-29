@@ -12,7 +12,7 @@ proj_dir=$(pwd)
 # clone openwrt
 cd "$proj_dir"
 rm -rf openwrt
-git clone -b v22.03 https://github.com/openwrt/openwrt.git openwrt
+git clone -b vopenwrt-22.03 https://github.com/openwrt/openwrt.git openwrt
 
 # patch openwrt
 cd "$proj_dir/openwrt"
