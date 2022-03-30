@@ -154,7 +154,7 @@ jobs:
       with:
           tag_name: AutoUpdate
           body_path: update_log.txt
-          files: openwrt/bin/*
+          files: ${{ env.FIRMWARE }}/*
 
     - name: 删除工作流运行
       uses: GitRML/delete-workflow-runs@main
