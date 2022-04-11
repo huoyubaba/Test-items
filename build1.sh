@@ -22,8 +22,8 @@ svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-sqm pack
 git clone https://github.com/ricsc/sqm-scripts.git package/sqm-scripts
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-smartdns package/luci-app-smartdns
 svn co https://github.com/kenzok8/small-package/trunk/smartdns package/smartdns
-# svn co https://github.com/kenzok8/jell/trunk/luci-app-vlmcsd package/luci-app-vlmcsd
-# svn co https://github.com/kenzok8/jell/trunk/vlmcsd package/vlmcsd
+svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-vlmcsd package/luci-app-vlmcsd
+svn co https://github.com/coolsnowwolf/luci/trunk/applications/vlmcsd package/vlmcsd
 # svn co https://github.com/kenzok8/jell/trunk/luci-app-samba4 package/luci-app-samba4
 # svn co https://github.com/kenzok8/jell/trunk/autoshare-samba package/autoshare-samba
 # svn co https://github.com/kenzok8/jell/trunk/luci-app-vsftpd package/luci-app-vsftpd
