@@ -1,4 +1,3 @@
-
 #
 # Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
 #
@@ -7,6 +6,7 @@
 #
 # https://github.com/P3TERX/Actions-OpenWrt
 # Description: Build OpenWrt using GitHub Actions
+#
 
 name: Build test
 
