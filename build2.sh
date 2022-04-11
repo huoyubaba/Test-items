@@ -6,8 +6,8 @@
 # See /LICENSE for more information.
 #
 # https://github.com/P3TERX/Actions-OpenWrt
-# File name: build1.sh
-# Description: OpenWrt DIY script part 1 (After Update feeds)
+# File name: build2.sh
+# Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
 # Modify default IP
