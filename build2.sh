@@ -22,6 +22,9 @@ sed -i 's/ssid=OpenWrt/ssid=BlueFire/g' package/kernel/mac80211/files/lib/wifi/m
 # Modify hostname
 sed -i 's/OpenWrt/BlueFire/g' package/base-files/files/bin/config_generate
 
+
+sed -i 's/dnsmasq/dnsmasq-full/g' include/target.mk
+
 # 删除默认密码
 # sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 
