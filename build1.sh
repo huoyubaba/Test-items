@@ -30,6 +30,6 @@ svn co https://github.com/kenzok8/jell/trunk/vlmcsd package/vlmcsd
 # svn co https://github.com/kenzok8/jell/trunk/vsftpd-alt package/vsftpd-alt
 # svn co https://github.com/kenzok8/small-package/trunk/luci-app-autoreboot package/luci-app-autoreboot
 # svn co https://github.com/kenzok8/small-package/trunk/luci-app-ramfree package/luci-app-ramfree
-# svn co https://github.com/kenzok8/small-package/trunk/luci-app-usb3disable package/luci-app-usb3disable
-# svn co https://github.com/kenzok8/jell/trunk/luci-app-accesscontrol package/luci-app-accesscontrol
+svn co https://github.com/kenzok8/small-package/trunk/luci-app-usb3disable package/luci-app-usb3disable
+svn co https://github.com/kenzok8/jell/trunk/luci-app-accesscontrol package/luci-app-accesscontrol
 # svn co https://github.com/kenzok8/jell/trunk/luci-app-usb-printer package/luci-app-usb-printer
