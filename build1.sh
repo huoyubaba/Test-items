@@ -18,7 +18,7 @@
 # git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
 # git clone https://github.com/zlg98/luci-app-vlmcsd.git package/luci-app-vlmcsd
 # git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
-svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-sqm package/luci-app-sqm
+git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
 git clone https://github.com/ricsc/sqm-scripts.git package/sqm-scripts
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-smartdns package/luci-app-smartdns
 svn co https://github.com/kiddin9/openwrt-packages/trunk/smartdns package/smartdns
