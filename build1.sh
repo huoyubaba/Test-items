@@ -24,9 +24,9 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-smartdns packa
 svn co https://github.com/kiddin9/openwrt-packages/trunk/smartdns package/smartdns
 svn co https://github.com/kiddin9/openwrt-packages/trunk/applications/luci-app-vlmcsd package/luci-app-vlmcsd
 svn co https://github.com/kiddin9/openwrt-packages/trunk/vlmcsd package/vlmcsd
-# svn co https://github.com/kenzok8/jell/trunk/luci-app-samba4 package/luci-app-samba4
-# svn co https://github.com/kenzok8/jell/trunk/autoshare-samba package/autoshare-samba
-# svn co https://github.com/kenzok8/jell/trunk/luci-app-vsftpd package/luci-app-vsftpd
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-samba4 package/luci-app-samba4
+svn co https://github.com/kiddin9/openwrt-packages/trunk/autoshare-samba package/autoshare-samba
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vsftpd package/luci-app-vsftpd
 # svn co https://github.com/kenzok8/jell/trunk/vsftpd-alt package/vsftpd-alt
 # svn co https://github.com/kenzok8/small-package/trunk/luci-app-autoreboot package/luci-app-autoreboot
 # svn co https://github.com/kenzok8/small-package/trunk/luci-app-ramfree package/luci-app-ramfree
