@@ -20,8 +20,8 @@
 # git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
 git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
 git clone https://github.com/ricsc/sqm-scripts.git package/sqm-scripts
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-smartdns package/luci-app-smartdns
-svn co https://github.com/kiddin9/openwrt-packages/trunk/smartdns package/smartdns
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-smartdns package/luci-app-smartdns
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/smartdns package/smartdns
 svn co https://github.com/kiddin9/openwrt-packages/trunk/applications/luci-app-vlmcsd package/luci-app-vlmcsd
 svn co https://github.com/kiddin9/openwrt-packages/trunk/vlmcsd package/vlmcsd
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-samba4 package/luci-app-samba4
