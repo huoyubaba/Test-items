@@ -35,3 +35,4 @@ svn co https://github.com/kenzok8/small-package/trunk/luci-app-ramfree package/l
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb3disable package/luci-app-usb3disable  #禁止USB3服务
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-accesscontrol package/luci-app-accesscontrol #上网时间
 svn co https://github.com/kenzok8/jell/trunk/luci-app-usb-printer package/luci-app-usb-printer  #共享打印服务
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-arpbind.git package/luci-app-arpbind   #IP/MAC绑定服务
