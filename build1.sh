@@ -15,8 +15,8 @@
 
 # Add a feed source
 # sed -i '$a src-git kenzo https://github.com/kenzok8/small-package' feeds.conf.default   # 软件源
-git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm
-git clone https://github.com/ricsc/sqm-scripts.git package/sqm-scripts
+git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm #sqm流量整理
+git clone https://github.com/ricsc/sqm-scripts.git package/sqm-scripts #sqm流量整理
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-smartdns package/luci-app-smartdns #smartdns DNS加速
 svn co https://github.com/kiddin9/openwrt-packages/trunk/smartdns package/smartdns #smartdns DNS加速
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome package/luci-app-adguardhome #adguardhome 广告拦截 DNS加速
@@ -36,3 +36,4 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-arpbind.git pa
 svn co https://github.com/kenzok8/small-package/trunk/luci-app-oaf package/luci-app-oaf  #网站限制浏览服务
 svn co https://github.com/kenzok8/small-package/trunk/open-app-filter package/open-app-filter   #网站限制浏览服务
 svn co https://github.com/kenzok8/small-package/trunk/oaf package/oaf   #网站限制浏览服务
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-passwall package/passwall  #翻墙
