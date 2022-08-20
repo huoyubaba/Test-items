@@ -37,3 +37,5 @@ svn co https://github.com/kenzok8/small-package/trunk/luci-app-oaf package/luci-
 svn co https://github.com/kenzok8/small-package/trunk/open-app-filter package/open-app-filter   #网站限制浏览服务
 svn co https://github.com/kenzok8/small-package/trunk/oaf package/oaf   #网站限制浏览服务
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-passwall package/passwall  #翻墙
+svn co https://github.com/kenzok8/small-package/trunk/luci-app-mosdns package/luci-app-mosdns  #mosdns dns服务
+svn co https://github.com/kenzok8/small-package/trunk/mosdns package/mosdns  #mosdns dns服务
