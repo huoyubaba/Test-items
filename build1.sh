@@ -17,8 +17,8 @@
 # sed -i '$a src-git kenzo https://github.com/kenzok8/small-package' feeds.conf.default   # 软件源
 git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm #sqm流量整理
 git clone https://github.com/ricsc/sqm-scripts.git package/sqm-scripts #sqm流量整理
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-smartdns package/luci-app-smartdns #smartdns DNS加速
-svn co https://github.com/kiddin9/openwrt-packages/trunk/smartdns package/smartdns #smartdns DNS加速
+svn co https://github.com/kenzok8/small-package/trunk/luci-app-smartdns package/luci-app-smartdns #smartdns DNS加速
+svn co https://github.com/kenzok8/small-package/trunk/smartdns package/smartdns #smartdns DNS加速
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome package/luci-app-adguardhome #adguardhome 广告拦截 DNS加速
 svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome package/adguardhome #adguardhome 广告拦截 DNS加速
 svn co https://github.com/kiddin9/openwrt-packages/trunk/applications/luci-app-vlmcsd package/luci-app-vlmcsd  #kms 激活服务
