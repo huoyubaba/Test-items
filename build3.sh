@@ -14,5 +14,5 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-sed -i '$a src-git luci https://github.com/openwrt/luci' feeds.conf.default   # 软件源
-sed -i '$a src-git packages https://github.com/openwrt/packages' feeds.conf.default   # 基础包
+sed -i '$a src-git baba https://github.com/openwrt/luci' feeds.conf.default   # 软件源
+# sed -i '$a src-git packages https://github.com/openwrt/packages' feeds.conf.default   # 基础包
