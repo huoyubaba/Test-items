@@ -19,3 +19,15 @@
 # sed -i '$a src-git kenzo https://github.com/kenzok8/small-package' feeds.conf.default   # 软件源
 svn co https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app-smartdns package/luci-app-smartdns
 svn co https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app-sqm package/luci-app-sqm
+# git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm #sqm流量整理
+git clone https://github.com/ricsc/sqm-scripts.git package/sqm-scripts #sqm流量整理
+# svn co https://github.com/kenzok8/small-package/trunk/luci-app-smartdns package/luci-app-smartdns #smartdns DNS加速
+svn co https://github.com/kenzok8/small-package/trunk/smartdns package/smartdns #smartdns DNS加速
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome package/luci-app-adguardhome #adguardhome 广告拦截 DNS加速
+svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome package/adguardhome #adguardhome 广告拦截 DNS加速
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vlmcsd package/luci-app-vlmcsd  #kms 激活服务
+svn co https://github.com/kiddin9/openwrt-packages/trunk/vlmcsd package/vlmcsd  #kms 激活服务
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-samba4 package/luci-app-samba4  #网络共享 服务器
+svn co https://github.com/kiddin9/openwrt-packages/trunk/autoshare-samba package/autoshare-samba  #网络共享 自动挂载服务
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vsftpd package/luci-app-vsftpd  #网络ftp共享 服务器
+svn co https://github.com/kenzok8/jell/trunk/vsftpd-alt package/vsftpd-alt  #网络共享 ftp服务文件
