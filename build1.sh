@@ -14,6 +14,7 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
+sed -i '$a src-git lede https://github.com/coolsnowwolf/luci/tree/master/applications' feeds.conf.default
 # sed -i '$a src-git kenzo https://github.com/kenzok8/small-package' feeds.conf.default   # 软件源
 # git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm #sqm流量整理
 # git clone https://github.com/ricsc/sqm-scripts.git package/sqm-scripts #sqm流量整理
