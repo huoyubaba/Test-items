@@ -34,3 +34,4 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-oaf package/lu
 svn co https://github.com/kiddin9/openwrt-packages/trunk/open-app-filter package/open-app-filter
 svn co https://github.com/kiddin9/openwrt-packages/trunk/oaf package/oaf
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb3disable package/luci-app-usb3disable
+svn co https://github.com/kenzok8/jell/small-package/trunk/luci-app-easymesh package/luci-app-easymesh
