@@ -14,5 +14,5 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-sed -i '$a src-git lede https://github.com/coolsnowwolf/luci/tree/master/applications' feeds.conf.default  # 软件源
+sed -i '$a src-git package https://github.com/coolsnowwolf/luci/tree/master/applications' feeds.conf.default  # 软件源
 # sed -i '$a src-git packages https://github.com/openwrt/packages' feeds.conf.default   # 基础包
