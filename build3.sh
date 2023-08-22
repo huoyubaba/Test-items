@@ -17,3 +17,5 @@
 # sed -i '$a src-git applications https://github.com/coolsnowwolf/luci/tree/master/applications' feeds.conf.default  # 软件源
 # sed -i '$a src-git packages https://github.com/openwrt/packages' feeds.conf.default   # 基础包
 # sed -i '$a src-git kenzo https://github.com/kenzok8/small-package' feeds.conf.default   # 软件源
+svn co https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app-smartdns package/luci-app-smartdns
+svn co https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app-sqm package/luci-app-sqm
