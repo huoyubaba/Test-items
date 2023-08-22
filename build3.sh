@@ -33,3 +33,4 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-arpbind packag
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-oaf package/luci-app-oaf
 svn co https://github.com/kiddin9/openwrt-packages/trunk/open-app-filter package/open-app-filter
 svn co https://github.com/kiddin9/openwrt-packages/trunk/oaf package/oaf
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app- package/luci-app-arpbind
