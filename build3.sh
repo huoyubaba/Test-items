@@ -31,3 +31,4 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/vlmcsd package/vlmcsd  
 svn co https://github.com/kiddin9/openwrt-packages/trunk/autoshare-samba package/autoshare-samba  #网络共享 自动挂载服务
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vsftpd package/luci-app-vsftpd  #网络ftp共享 服务器
 svn co https://github.com/kenzok8/jell/trunk/vsftpd-alt package/vsftpd-alt  #网络共享 ftp服务文件
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-arpbind package/luci-app-arpbind   #IP/MAC绑定服务
