@@ -17,8 +17,8 @@
 # sed -i '$a src-git luci https://github.com/coolsnowwolf/luci' feeds.conf.default  # 软件源
 # sed -i '$a src-git packages https://github.com/openwrt/packages' feeds.conf.default   # 基础包
 sed -i '$a src-git kiddin9 https://github.com/kiddin9/openwrt-packages' feeds.conf.default   # 软件源
-# git clone https://github.com/Plutonium141/luci-app-sqm.git package/luci-app-sqm #sqm流量整理
-# git clone https://github.com/tohojo/sqm-scripts.git package/sqm-scripts #sqm流量整理
+git clone https://github.com/Plutonium141/luci-app-sqm.git package/luci-app-sqm #sqm流量整理
+git clone https://github.com/tohojo/sqm-scripts.git package/sqm-scripts #sqm流量整理
 # svn co https://github.com/kenzok8/small-package/trunk/luci-app-smartdns package/luci-app-smartdns #smartdns DNS加速
 # svn co https://github.com/kenzok8/small-package/trunk/smartdns package/smartdns #smartdns DNS加速
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome package/luci-app-adguardhome #adguardhome 广告拦截 DNS加速
