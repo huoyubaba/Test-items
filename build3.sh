@@ -37,4 +37,6 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb3disable pa
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-easymesh package/luci-app-easymesh
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb-printer package/luci-app-usb-printer
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc package/luci-app-turboacc
+svn co https://github.com/kiddin9/openwrt-packages/trunk/shortcut-fe package/shortcut-fe
+
 # svn co https://github.com/deplives/luci-app-samba package//luci-app-samba
