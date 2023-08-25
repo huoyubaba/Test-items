@@ -30,13 +30,13 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/vlmcsd package/vlmcsd  
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vsftpd package/luci-app-vsftpd  #网络ftp共享 服务器
 svn co https://github.com/kiddin9/openwrt-packages/trunk/vsftpd-alt package/vsftpd-alt  #网络共享 ftp服务文件
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-arpbind package/luci-app-arpbind   #IP/MAC绑定服务
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-oaf package/luci-app-oaf
-svn co https://github.com/kiddin9/openwrt-packages/trunk/open-app-filter package/open-app-filter
-svn co https://github.com/kiddin9/openwrt-packages/trunk/oaf package/oaf
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb3disable package/luci-app-usb3disable
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-easymesh package/luci-app-easymesh
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb-printer package/luci-app-usb-printer
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc package/luci-app-turboacc
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/shortcut-fe package/shortcut-fe
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-flowoffload package/luci-app-flowoffload 
-# svn co https://github.com/deplives/luci-app-samba package//luci-app-samba
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-oaf package/luci-app-oaf  #控制访问页面
+svn co https://github.com/kiddin9/openwrt-packages/trunk/open-app-filter package/open-app-filter   #控制访问页面
+svn co https://github.com/kiddin9/openwrt-packages/trunk/oaf package/oaf   #控制访问页面
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb3disable package/luci-app-usb3disable  #禁用USB3.0
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-easymesh package/luci-app-easymesh   # 简易联网
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb-printer package/luci-app-usb-printer    #USB打印服务
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc package/luci-app-turboacc      #网络加速
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/shortcut-fe package/shortcut-fe   #网络加速附带插件
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-flowoffload package/luci-app-flowoffload   #网络加速附带插件
+svn co https://github.com/deplives/luci-app-samba package/luci-app-samba  # 网络共享服务3.6
