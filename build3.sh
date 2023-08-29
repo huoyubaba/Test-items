@@ -40,3 +40,4 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb-printer pa
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/shortcut-fe package/shortcut-fe   #网络加速附带插件
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-flowoffload package/luci-app-flowoffload   #网络加速附带插件
 svn co https://github.com/tcsr200722/luci-app-samba package/luci-app-samba  # 网络共享服务3.6
+git clone https://github.com/holoto/luci-app-flowoffload.git package/luci-app-flowoffload
