@@ -42,4 +42,5 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb-printer pa
 svn co https://github.com/tcsr200722/luci-app-samba package/luci-app-samba  # 网络共享服务3.6
 git clone https://github.com/holoto/luci-app-flowoffload.git package/luci-app-flowoffload
 git clone https://github.com/op4packages/pdnsd-alt.git package/pdnsd-alt
+git clone https://github.com/MegaKG/DNSforwarder.git package/DNSforwarder
 git clone https://github.com/ntlf9t/luci-app-easymesh.git package/luci-app-easymesh   # 简易联网
