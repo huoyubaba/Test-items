@@ -20,9 +20,7 @@
 # git clone https://github.com/Plutonium141/luci-app-sqm.git package/luci-app-sqm #sqm流量整理
 git clone https://github.com/tohojo/sqm-scripts.git package/sqm-scripts #sqm流量整理
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-smartdns package/luci-app-smartdns #smartdns DNS加速
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/smartdns package/smartdns #smartdns DNS加速
-git clone https://github.com/pymumu/openwrt-smartdns.git package/smartdns #smartdns DNS加速
-# git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns #smartdns DNS加速
+svn co https://github.com/kiddin9/openwrt-packages/trunk/smartdns package/smartdns #smartdns DNS加速
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome package/luci-app-adguardhome #adguardhome 广告拦截 DNS加速
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome package/adguardhome #adguardhome 广告拦截 DNS加速
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vlmcsd package/luci-app-vlmcsd  #kms 激活服务
@@ -36,13 +34,16 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-oaf package/lu
 svn co https://github.com/kiddin9/openwrt-packages/trunk/open-app-filter package/open-app-filter   #控制访问页面
 svn co https://github.com/kiddin9/openwrt-packages/trunk/oaf package/oaf   #控制访问页面
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb3disable package/luci-app-usb3disable  #禁用USB3.0
-
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb-printer package/luci-app-usb-printer    #USB打印服务
+svn co https://github.com/tcsr200722/luci-app-samba package/luci-app-samba  # 网络共享服务3.6
+
+git clone https://github.com/ntlf9t/luci-app-easymesh.git package/luci-app-easymesh   # 简易联网
+
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/shortcut-fe package/shortcut-fe   #网络加速附带插件
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-flowoffload package/luci-app-flowoffload   #网络加速附带插件
-svn co https://github.com/tcsr200722/luci-app-samba package/luci-app-samba  # 网络共享服务3.6
+
 # git clone https://github.com/holoto/luci-app-flowoffload.git package/luci-app-flowoffload
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/pdnsd-alt package/pdnsd-alt
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/dnsforwarder package/dnsforwarder
-git clone https://github.com/ntlf9t/luci-app-easymesh.git package/luci-app-easymesh   # 简易联网
-git clone https://github.com/whengrun/luci-app-turboacc.git package/luci-app-turboacc  #网络加速
+
+# git clone https://github.com/whengrun/luci-app-turboacc.git package/luci-app-turboacc  #网络加速
