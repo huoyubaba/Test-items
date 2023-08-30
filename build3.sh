@@ -38,11 +38,11 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/oaf package/oaf   #控�
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb3disable package/luci-app-usb3disable  #禁用USB3.0
 
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb-printer package/luci-app-usb-printer    #USB打印服务
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc package/luci-app-turboacc      #网络加速
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/shortcut-fe package/shortcut-fe   #网络加速附带插件
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-flowoffload package/luci-app-flowoffload   #网络加速附带插件
 svn co https://github.com/tcsr200722/luci-app-samba package/luci-app-samba  # 网络共享服务3.6
-git clone https://github.com/holoto/luci-app-flowoffload.git package/luci-app-flowoffload
-svn co https://github.com/kiddin9/openwrt-packages/trunk/pdnsd-alt package/pdnsd-alt
-svn co https://github.com/kiddin9/openwrt-packages/trunk/dnsforwarder package/dnsforwarder
+# git clone https://github.com/holoto/luci-app-flowoffload.git package/luci-app-flowoffload
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/pdnsd-alt package/pdnsd-alt
+# svn co https://github.com/kiddin9/openwrt-packages/trunk/dnsforwarder package/dnsforwarder
 git clone https://github.com/ntlf9t/luci-app-easymesh.git package/luci-app-easymesh   # 简易联网
+git clone https://github.com/whengrun/luci-app-turboacc.git package/luci-app-turboacc  #网络加速
