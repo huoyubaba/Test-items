@@ -14,15 +14,17 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-# sed -i '$a src-git luci https://github.com/coolsnowwolf/luci' feeds.conf.default  # 软件源
-# sed -i '$a src-git packages https://github.com/openwrt/packages' feeds.conf.default   # 基础包
-# sed -i '$a src-git kiddin9 https://github.com/kiddin9/openwrt-packages' feeds.conf.default   # 软件源
+
+
+#添加sqm
 # git clone https://github.com/Plutonium141/luci-app-sqm.git package/luci-app-sqm #sqm流量整理
 git clone https://github.com/tohojo/sqm-scripts.git package/sqm-scripts #sqm流量整理
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-smartdns package/luci-app-smartdns #smartdns DNS加速
-svn co https://github.com/kiddin9/openwrt-packages/trunk/smartdns package/smartdns #smartdns DNS加速
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome package/luci-app-adguardhome #adguardhome 广告拦截 DNS加速
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome package/adguardhome #adguardhome 广告拦截 DNS加速
+
+#添加smartdns
+git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
+git clone -b lede https://github.com/pymumu/luci-app-smartdns.gi
+
+# git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome 广告拦截 DNS加速
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vlmcsd package/luci-app-vlmcsd  #kms 激活服务
 svn co https://github.com/kiddin9/openwrt-packages/trunk/vlmcsd package/vlmcsd  #kms 激活服务
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-samba4 package/luci-app-samba4  #网络共享 服务器
@@ -39,10 +41,10 @@ svn co https://github.com/tcsr200722/luci-app-samba package/luci-app-samba  # �
 
 git clone https://github.com/ntlf9t/luci-app-easymesh.git package/luci-app-easymesh   # 简易联网
 
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc package/luci-app-turboacc   #网络加速附带插件
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/pdnsd-alt package/pdnsd-alt
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/dnsforwarder package/dnsforwarder
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/shortcut-fe package/shortcut-fe   #网络加速附带插件
+# themes添加
+git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
+git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
+git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/luci-theme-atmaterial
 
 # Add truboacc source
 mkdir -p turboacc_tmp ./package/turboacc
