@@ -23,8 +23,8 @@ git clone https://github.com/tohojo/sqm-scripts.git package/sqm-scripts #sqm流�
 #添加smartdns
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
+# git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome # 广告拦截DNS加速
 
-git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome # 广告拦截DNS加速
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vlmcsd package/luci-app-vlmcsd  #kms激活服务
 svn co https://github.com/kiddin9/openwrt-packages/trunk/vlmcsd package/vlmcsd  #kms激活服务
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-samba4 package/luci-app-samba4  #网络共享服务器
