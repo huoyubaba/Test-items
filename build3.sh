@@ -33,10 +33,10 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vsftpd package
 svn co https://github.com/kiddin9/openwrt-packages/trunk/vsftpd-alt package/vsftpd-alt  #网络共享ftp服务文件
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-arpbind package/luci-app-arpbind   #IP/MAC绑定服务
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-oaf package/luci-app-oaf  #控制访问页面
-git clone https://github.com/kiddin9/openwrt-packages/trunk/open-app-filter package/open-app-filter   #控制访问页面
-git clone https://github.com/kiddin9/openwrt-packages/trunk/oaf package/oaf   #控制访问页面
-git clone https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb3disable package/luci-app-usb3disable  #禁用USB3.0
-git clone https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb-printer package/luci-app-usb-printer    #USB打印服务
+svn co https://github.com/kiddin9/openwrt-packages/trunk/open-app-filter package/open-app-filter   #控制访问页面
+svn co https://github.com/kiddin9/openwrt-packages/trunk/oaf package/oaf   #控制访问页面
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb3disable package/luci-app-usb3disable  #禁用USB3.0
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb-printer package/luci-app-usb-printer    #USB打印服务
 svn co https://github.com/tcsr200722/luci-app-samba package/luci-app-samba  # 网络共享服务3.6
 svn co https://github.com/kiddin9/openwrt-packages/trunk/nftables package/nftables
 git clone https://github.com/ntlf9t/luci-app-easymesh.git package/luci-app-easymesh   # 简易联网
