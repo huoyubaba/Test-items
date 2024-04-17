@@ -15,7 +15,7 @@
 
 # Add a feed source
 
-
+sed -i '$a src-git kiddin9 https://github.com/kiddin9/openwrt-packages' feeds.conf.default
 #添加sqm
 # git clone https://github.com/Plutonium141/luci-app-sqm.git package/luci-app-sqm #sqm流量整理
 git clone https://github.com/tohojo/sqm-scripts.git package/sqm-scripts #sqm流量整理
