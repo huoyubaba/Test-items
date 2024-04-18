@@ -37,7 +37,7 @@ svn co https://github.com/huoyubaba/openwrt-packages/trunk/open-app-filter packa
 svn co https://github.com/huoyubaba/openwrt-packages/trunk/oaf package/oaf   #控制访问页面
 svn co https://github.com/huoyubaba/openwrt-packages/trunk/luci-app-usb3disable package/luci-app-usb3disable  #禁用USB3.0
 svn co https://github.com/huoyubaba/openwrt-packages/trunk/luci-app-usb-printer package/luci-app-usb-printer    #USB打印服务
-svn co https://github.com/tcsr200722/luci-app-samba package/luci-app-samba  # 网络共享服务3.6
+git clone https://github.com/tcsr200722/luci-app-samba package/luci-app-samba  # 网络共享服务3.6
 svn co https://github.com/huoyubaba/openwrt-packages/trunk/nftables package/nftables
 git clone https://github.com/ntlf9t/luci-app-easymesh.git package/luci-app-easymesh   # 简易联网
 
