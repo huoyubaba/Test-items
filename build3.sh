@@ -14,7 +14,7 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-echo 'src-git openwrt-packages https://github.com/huoyubaba/openwrt-packages >>feeds.conf.default
+
 #添加sqm
 # git clone https://github.com/Plutonium141/luci-app-sqm.git package/luci-app-sqm #sqm流量整理
 git clone https://github.com/tohojo/sqm-scripts.git package/sqm-scripts #sqm流量整理
