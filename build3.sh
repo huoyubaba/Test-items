@@ -42,9 +42,9 @@ git clone https://github.com/tcsr200722/luci-app-samba package/luci-app-samba  #
 svn co https://github.com/kiddin9/openwrt-packages/trunk/nftables package/nftables
 git clone https://github.com/ntlf9t/luci-app-easymesh.git package/luci-app-easymesh   # 简易联网
 
-git_sparse_clone main https://github.com/kiddin9/openwrt-packages luci-app-oaf open-app-filter oaf 
-git_sparse_clone main https://github.com/kiddin9/openwrt-packages luci-app-arpbind luci-app-vsftpd vsftpd-alt 
-git_sparse_clone main https://github.com/kiddin9/openwrt-packages luci-app-vlmcsd vlmcsd
+git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-oaf open-app-filter oaf 
+git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-arpbind luci-app-vsftpd vsftpd-alt 
+git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-vlmcsd vlmcsd
 
 # themes添加
 git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
