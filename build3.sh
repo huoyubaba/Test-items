@@ -1,19 +1,17 @@
 #!/bin/bash
-#
-# Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
-#
-# This is free software, licensed under the MIT License.
-# See /LICENSE for more information.
-#
-# https://github.com/P3TERX/Actions-OpenWrt
-# File name: build1.sh
-# Description: OpenWrt DIY script part 1 (Before Update feeds)
-#
 
-# Uncomment a feed source
-#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+# 修改默认IP
+# sed -i 's/192.168.1.1/10.0.10.1/g' package/base-files/files/bin/config_generate
 
-# Add a feed source
+# 更改默认 Shell 为 zsh
+# sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
+
+# TTYD 免登录
+# sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.config
+
+# 移除要替换的包
+rm -rf feeds/packages/net/smartdns
+rm -rf feeds/luci/themes/luci-theme-argon
 
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
@@ -25,41 +23,28 @@ function git_sparse_clone() {
   cd .. && rm -rf $repodir
 }
 
+# 添加额外插件
+git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+# git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
+git clone https://github.com/ntlf9t/luci-app-easymesh.git package/luci-app-easymesh   # 简易联网
+git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-oaf open-app-filter oaf 
+git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-arpbind luci-app-vsftpd vsftpd-alt 
+git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-vlmcsd vlmcsd luci-app-usb3disable
+
+# Themes
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+
+# 更改 Argon 主题背景
+cp -f $GITHUB_WORKSPACE/images/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
+
+# SmartDNS
+git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
+git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
+
 #添加sqm
 # git clone https://github.com/Plutonium141/luci-app-sqm.git package/luci-app-sqm #sqm流量整理
 git clone https://github.com/tohojo/sqm-scripts.git package/sqm-scripts #sqm流量整理
-
-#添加smartdns
-git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
-git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
-# git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome # 广告拦截DNS加速
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vlmcsd package/luci-app-vlmcsd  #kms激活服务
-svn co https://github.com/kiddin9/openwrt-packages/trunk/vlmcsd package/vlmcsd  #kms激活服务
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-samba4 package/luci-app-samba4  #网络共享服务器
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/autoshare-samba package/autoshare-samba  #网络共享自动挂载服务
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vsftpd package/luci-app-vsftpd  #网络ftp共享服务器
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/vsftpd-alt package/vsftpd-alt  #网络共享ftp服务文件
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-arpbind package/luci-app-arpbind   #IP/MAC绑定服务
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-oaf package/luci-app-oaf  #控制访问页面
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/open-app-filter package/open-app-filter   #控制访问页面
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/oaf package/oaf   #控制访问页面
-
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb3disable package/luci-app-usb3disable  #禁用USB3.0
-git clone https://github.com/rufengsuixing/luci-app-usb3disable package/luci-app-usb3disable
-
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb-printer package/luci-app-usb-printer    #USB打印服务
-git clone https://github.com/tcsr200722/luci-app-samba package/luci-app-samba  # 网络共享服务3.6
-svn co https://github.com/kiddin9/openwrt-packages/trunk/nftables package/nftables
-git clone https://github.com/ntlf9t/luci-app-easymesh.git package/luci-app-easymesh   # 简易联网
-
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-oaf open-app-filter oaf 
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-arpbind luci-app-vsftpd vsftpd-alt 
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-vlmcsd vlmcsd
-
-# themes添加
-git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
-git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
-git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/luci-theme-atmaterial
 
 # Add truboacc source
 mkdir -p turboacc_tmp ./package/turboacc
@@ -83,5 +68,10 @@ cp -RT ./turboacc_tmp/turboacc/nftables-$(grep -o 'NFTABLES_VERSION=.*' ./turboa
 rm -rf turboacc_tmp
 echo "# CONFIG_NF_CONNTRACK_CHAIN_EVENTS is not set" >> target/linux/generic/config-5.15
 echo "# CONFIG_SHORTCUT_FE is not set" >> target/linux/generic/config-5.15
+
+
+# 取消主题默认设置
+find package/luci-theme-*/* -type f -name '*luci-theme-*' -print -exec sed -i '/set luci.main.mediaurlbase/d' {} \;
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
