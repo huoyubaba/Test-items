@@ -30,7 +30,7 @@ git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFil
 git clone https://github.com/ntlf9t/luci-app-easymesh.git package/luci-app-easymesh   # 简易联网
 # git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-oaf open-app-filter oaf 
 git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-arpbind luci-app-vsftpd vsftpd-alt 
-git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-vlmcsd vlmcsd luci-app-usb3disable luci-app-usbprint
+git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-vlmcsd vlmcsd luci-app-usb3disable luci-app-usb-printer
 
 # Themes
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
