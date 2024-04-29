@@ -10,7 +10,7 @@
 # sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.config
 
 # 移除要替换的包
-rm -rf feeds/packages/net/smartdns
+# rm -rf feeds/packages/net/smartdns
 rm -rf feeds/luci/themes/luci-theme-argon
 
 # Git稀疏克隆，只克隆指定目录到本地
@@ -39,8 +39,8 @@ git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon packa
 cp -f $GITHUB_WORKSPACE/images/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 
 # SmartDNS
-git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
-git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
+# git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
+# git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
 
 #添加sqm
 # git clone https://github.com/Plutonium141/luci-app-sqm.git package/luci-app-sqm #sqm流量整理
