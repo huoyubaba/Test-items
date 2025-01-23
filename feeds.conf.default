@@ -22,5 +22,5 @@ git clone https://github.com/tohojo/sqm-scripts.git package/sqm-scripts #sqmÊµÅÈ
 # Add truboacc source
 curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
-
 # Add openfros
+src-git-full fros https://github.com/openfros/packages.git
