@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Newifi OpenWrt-23.05
+name: Newifi D3 OpenWrt-23.05
 
 on:
   repository_dispatch:
