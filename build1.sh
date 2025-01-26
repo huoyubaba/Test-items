@@ -1,42 +1,63 @@
 #!/bin/bash
-#
-# Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
-#
-# This is free software, licensed under the MIT License.
-# See /LICENSE for more information.
-#
-# https://github.com/P3TERX/Actions-OpenWrt
-# File name: build1.sh
-# Description: OpenWrt DIY script part 1 (Before Update feeds)
-#
 
-# Uncomment a feed source
-#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+# 修改默认IP
+# sed -i 's/192.168.1.1/10.0.10.1/g' package/base-files/files/bin/config_generate
 
-# Add a feed source
-sed -i '$a src-git lede https://github.com/coolsnowwolf/luci/tree/master/applications' feeds.conf.default
-# sed -i '$a src-git kenzo https://github.com/kenzok8/small-package' feeds.conf.default   # 软件源
-# git clone https://github.com/loryncien/luci-app-sqm.git package/luci-app-sqm #sqm流量整理
-# git clone https://github.com/ricsc/sqm-scripts.git package/sqm-scripts #sqm流量整理
-# svn co https://github.com/kenzok8/small-package/trunk/luci-app-smartdns package/luci-app-smartdns #smartdns DNS加速
-# svn co https://github.com/kenzok8/small-package/trunk/smartdns package/smartdns #smartdns DNS加速
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome package/luci-app-adguardhome #adguardhome 广告拦截 DNS加速
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome package/adguardhome #adguardhome 广告拦截 DNS加速
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vlmcsd package/luci-app-vlmcsd  #kms 激活服务
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/vlmcsd package/vlmcsd  #kms 激活服务
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-samba4 package/luci-app-samba4  #网络共享 服务器
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/autoshare-samba package/autoshare-samba  #网络共享 自动挂载服务
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vsftpd package/luci-app-vsftpd  #网络ftp共享 服务器
-# svn co https://github.com/kenzok8/jell/trunk/vsftpd-alt package/vsftpd-alt  #网络共享 ftp服务文件
-# svn co https://github.com/kenzok8/small-package/trunk/luci-app-autoreboot package/luci-app-autoreboot #自动重启服务
-# svn co https://github.com/kenzok8/small-package/trunk/luci-app-ramfree package/luci-app-ramfree  #整理内存服务
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb3disable package/luci-app-usb3disable  #禁止USB3服务
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-accesscontrol package/luci-app-accesscontrol #上网时间
-# svn co https://github.com/kenzok8/jell/trunk/luci-app-usb-printer package/luci-app-usb-printer  #共享打印服务
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-arpbind package/luci-app-arpbind   #IP/MAC绑定服务
-# svn co https://github.com/kenzok8/small-package/trunk/luci-app-oaf package/luci-app-oaf  #网站限制浏览服务
-# svn co https://github.com/kenzok8/small-package/trunk/open-app-filter package/open-app-filter   #网站限制浏览服务
-# svn co https://github.com/kenzok8/small-package/trunk/oaf package/oaf   #网站限制浏览服务
-# svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-passwall package/passwall  #翻墙
-# svn co https://github.com/kenzok8/small-package/trunk/luci-app-mosdns package/luci-app-mosdns  #mosdns dns服务
-# svn co https://github.com/kenzok8/small-package/trunk/mosdns package/mosdns  #mosdns dns服务
+# 更改默认 Shell 为 zsh
+# sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
+
+# TTYD 免登录
+# sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.config
+
+#编译的固件文件名添加日期
+sed -i 's/IMG_PREFIX:=$(VERSION_DIST_SANITIZED)/IMG_PREFIX:=$(shell TZ=UTC-8 date "+%Y%m%d")-$(VERSION_DIST_SANITIZED)/g' include/image.mk
+
+# 移除要替换的包
+# rm -rf feeds/packages/net/smartdns
+rm -rf feeds/luci/themes/luci-theme-argon
+
+
+# 更改 Argon 主题背景
+cp -f $GITHUB_WORKSPACE/images/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
+
+# 取消主题默认设置
+find package/luci-theme-*/* -type f -name '*luci-theme-*' -print -exec sed -i '/set luci.main.mediaurlbase/d' {} \;
+
+###### Git稀疏克隆
+# 参数1是分支名, 参数2是仓库地址, 参数3是子目录，同一个仓库下载多个文件夹直接在后面跟文件名或路径，空格分开
+function git_sparse_clone() {
+  branch="$1" repourl="$2" && shift 2
+  git clone --depth=1 -b $branch --single-branch --filter=blob:none --sparse $repourl
+  repodir=$(echo $repourl | awk -F '/' '{print $(NF)}')
+  cd $repodir && git sparse-checkout set $@
+  mv -f $@ ../package
+  cd .. && rm -rf $repodir
+}
+# 添加额外插件
+git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
+git clone https://github.com/ntlf9t/luci-app-easymesh.git package/luci-app-easymesh   # 简易联网
+# git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-oaf open-app-filter oaf 
+git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-arpbind luci-app-vsftpd vsftpd-alt 
+git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-vlmcsd vlmcsd luci-app-usb3disable luci-app-usb-printer
+
+# Themes
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+
+# SmartDNS
+# git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
+# git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
+
+#添加sqm
+# git clone https://github.com/Plutonium141/luci-app-sqm.git package/luci-app-sqm #sqm流量整理
+git clone https://github.com/tohojo/sqm-scripts.git package/sqm-scripts #sqm流量整理
+
+# Add truboacc source
+curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
+
+# Add openfros
+# git clone https://github.com/openfros/fros.git package/fros #fros应用过滤
+
+./scripts/feeds update -a
+./scripts/feeds install -a
