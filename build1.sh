@@ -43,7 +43,7 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-arpbind 
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-vlmcsd vlmcsd luci-app-usb3disable luci-app-usb-printer
 
 # Themes
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-theme-argon
 
 # SmartDNS
 # git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
