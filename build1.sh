@@ -54,7 +54,7 @@ git clone https://github.com/tohojo/sqm-scripts.git package/sqm-scripts #sqm流�
 curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
 # Add openfros
-# git clone https://github.com/openfros/fros.git package/fros #fros应用过滤
+git clone https://github.com/openfros/fros.git package/fros #fros应用过滤
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
