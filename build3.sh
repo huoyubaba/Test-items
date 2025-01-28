@@ -39,7 +39,7 @@ git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/
 git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone https://github.com/ntlf9t/luci-app-easymesh.git package/luci-app-easymesh   # 简易联网
 # git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-oaf open-app-filter oaf 
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-arpbind luci-app-vsftpd vsftpd-alt 
+git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-arpbind luci-app-vsftpd vsftpd
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-vlmcsd vlmcsd luci-app-usb3disable luci-app-usb-printer
 
 # Themes
