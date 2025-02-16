@@ -25,5 +25,5 @@ sed -i 's/OpenWrt/BlueFire/g' package/base-files/files/bin/config_generate
 # 删除默认密码
 # sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 # sed -i 's_downloads.openwrt.org_mirrors.tuna.tsinghua.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
-
+make package/luci-app-oaf/compile V=s
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
