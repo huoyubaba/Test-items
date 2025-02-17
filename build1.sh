@@ -54,7 +54,7 @@ git clone https://github.com/tohojo/sqm-scripts.git package/sqm-scripts #sqmÊµÅÈ
 curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
 # Add oaf
-git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 make -j1 V=s
 
 ./scripts/feeds update -a
