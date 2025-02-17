@@ -54,11 +54,7 @@ git clone https://github.com/tohojo/sqm-scripts.git package/sqm-scripts #sqmæµé
 curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
 # Add oaf
-rm -rf package/OpenAppFilter
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
-
-echo "CONFIG_PACKAGE_luci-app-oaf=y" >>.config
-make defconfig
 make -j1 V=s
 
 ./scripts/feeds update -a
