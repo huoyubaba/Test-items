@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Newifi OpenWrt-23.05-fros
+name: Newifi OpenWrt
 
 on:
   repository_dispatch:
@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/openfros/fros
+  REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: main
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/11.config
