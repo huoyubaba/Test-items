@@ -51,7 +51,9 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-theme-argon
 git clone https://github.com/tohojo/sqm-scripts.git package/sqm-scripts #sqm流量整理
 
 # Add truboacc source
-curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
+#curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
-./scripts/feeds update -a
-./scripts/feeds install -a
+#./scripts/feeds update -a
+#./scripts/feeds install -a
+
+git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-turboacc
