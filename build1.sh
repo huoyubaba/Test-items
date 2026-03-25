@@ -35,9 +35,9 @@ git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/lu
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 # git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone https://github.com/ntlf9t/luci-app-easymesh.git package/luci-app-easymesh   # 简易联网
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-oaf open-app-filter oaf
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-arpbind luci-app-vsftpd vsftpd 
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-vlmcsd vlmcsd luci-app-usb3disable luci-app-usb-printer
+git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-oaf open-app-filter oaf
+git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-arpbind luci-app-vsftpd vsftpd 
+git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-vlmcsd vlmcsd luci-app-usb3disable luci-app-usb-printer
 
 # Themes
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-theme-argon
@@ -56,4 +56,4 @@ git clone https://github.com/tohojo/sqm-scripts.git package/sqm-scripts #sqm流�
 #./scripts/feeds update -a
 #./scripts/feeds install -a
 
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-turboacc
+git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-turboacc
