@@ -12,7 +12,6 @@
 
 name: newifi3-d2
 
-
 on:
   repository_dispatch:
   workflow_dispatch:
@@ -28,6 +27,7 @@ env:
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
+
 
 jobs:
   build:
@@ -77,7 +77,7 @@ jobs:
       run: |
         cd openwrt
         ./scripts/feeds install -a 
-                
+           
     - name: Load custom configuration
       run: |
         # [ -e files ] && mv files openwrt/files
