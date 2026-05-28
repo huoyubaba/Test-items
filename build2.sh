@@ -22,10 +22,6 @@ sed -i 's/ssid=OpenWrt/ssid=BlueFire/g' package/kernel/mac80211/files/lib/wifi/m
 # 修改主机名
 sed -i 's/OpenWrt/BlueFire/g' package/base-files/files/bin/config_generate
 
-# 移除冲突插件，防止编译失败
-rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
-rm -rf feeds/luci/applications/luci-app-openclash
-
 # 添加 helloworld 源（passwall/ssr++ 依赖）
 echo 'src-git helloworld https://github.com/fw876/helloworld' >> feeds.conf.default
 
