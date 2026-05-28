@@ -28,5 +28,4 @@ echo 'src-git helloworld https://github.com/fw876/helloworld' >> feeds.conf.defa
 # 固件文件名自动加日期
 sed -i 's/IMG_PREFIX:=$(VERSION_DIST_SANITIZED)/IMG_PREFIX:=$(shell TZ=UTC-8 date "+%Y%m%d")-$(VERSION_DIST_SANITIZED)/g' include/image.mk
 
-# TTYD 免登录
-sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/config
+
