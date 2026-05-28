@@ -26,8 +26,9 @@ env:
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
+  UPLOAD_GOFILE: false
+  RELEASE_FILE: release.txt
   TZ: Asia/Shanghai
-
 
 jobs:
   build:
@@ -72,15 +73,13 @@ jobs:
          rm -rf feeds/packages/lang/golang
          git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 
-
     - name: Install feeds
       run: |
         cd openwrt
         ./scripts/feeds install -a 
-           
+
     - name: Load custom configuration
       run: |
-        # [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
@@ -139,13 +138,8 @@ jobs:
       run: |
         echo "release_tag=$(date +"%Y.%m.%d-%H%M")" >> $GITHUB_OUTPUT
         touch "${RELEASE_FILE}"
-
-        if [ "${UPLOAD_GOFILE}" = "true" ] && [ -n "${{ steps.gofile.outputs.url }}" ]; then
-          echo "{U+0001F517} [GoFile](${{ steps.gofile.outputs.url }})" >> "${RELEASE_FILE}"
-        fi
-
         echo "status=success" >> $GITHUB_OUTPUT
-    
+
     - name: Upload firmware to release
       uses: softprops/action-gh-release@v2
       if: steps.tag.outputs.status == 'success' && !cancelled()
