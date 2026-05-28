@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# 编译的固件文件名添加日期
-sed -i 's/IMG_PREFIX:=$(VERSION_DIST_SANITIZED)/IMG_PREFIX:=$(shell TZ=UTC-8 date "+%Y%m%d")-$(VERSION_DIST_SANITIZED)/g' include/image.mk
-
-# TTYD 免登录
-sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.config
-
 # 移除要替换的包（防止冲突）
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/packages/net/{vsftpd,vlmcsd}
