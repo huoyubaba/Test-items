@@ -4,6 +4,9 @@
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/packages/net/{vsftpd,vlmcsd}
 rm -rf feeds/luci/applications/{luci-app-vsftpd,luci-app-vlmcsd,luci-app-arpbind,luci-app-turboacc,luci-app-oaf}
+# 移除冲突插件，防止编译失败
+rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
+rm -rf feeds/luci/applications/luci-app-openclash
 
 # Git稀疏克隆（通用函数，别动）
 git_sparse_clone() {
