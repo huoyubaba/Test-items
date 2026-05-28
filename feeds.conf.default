@@ -1,7 +1,13 @@
-# 官方 feeds（GitHub 镜像，国内稳）
+# src-git-full 表示完整克隆 Git 仓库（包含历史提交记录）
+# src-git 表示浅克隆（仅最新代码，速度更快，推荐用于日常编译）
 
+src-git packages https://git.openwrt.org/feed/packages.git
+src-git luci https://git.openwrt.org/project/luci.git
+src-git routing https://git.openwrt.org/feed/routing.git
+src-git telephony https://git.openwrt.org/feed/telephony.git
+src-git management https://git.openwrt.org/feed/management.git
 
-
-# 国内镜像（可选，怕超时再开）
-# src-git packages https://mirrors.tuna.tsinghua.edu.cn/openwrt/feed/packages.git
-# src-git luci https://mirrors.tuna.tsinghua.edu.cn/openwrt/project/luci.git
+# 以下源通常被注释掉，按需启用
+# src-git oldpackages http://git.openwrt.org/packages.git
+# src-git video https://github.com/openwrt/video.git
+# src-git targets https://github.com/openwrt/targets.git
