@@ -38,9 +38,3 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-theme-argon
 
 # SQM 流量管理
 git clone --depth=1 https://github.com/tohojo/sqm-scripts.git package/sqm-scripts
-
-cat >> .config <<EOF
-CONFIG_DEVEL=y
-CONFIG_TOOLCHAINOPTIMIZE=y
-CONFIG_CCACHE=y
-EOF
