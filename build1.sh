@@ -23,7 +23,7 @@ git_sparse_clone() {
 git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone --depth=1 https://github.com/ntlf9t/luci-app-easymesh package/luci-app-easymesh
-git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+
 # 集合插件（kiddin9）
 git_sparse_clone main https://github.com/kiddin9/op-packages \
   luci-app-arpbind \
@@ -38,6 +38,7 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-theme-argon
 
 # SQM 流量管理
 git clone --depth=1 https://github.com/tohojo/sqm-scripts.git package/sqm-scripts
+
 # OAF 管理
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 echo "CONFIG_PACKAGE_luci-app-oaf=y" >>.config
