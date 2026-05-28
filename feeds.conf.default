@@ -5,7 +5,6 @@ src-git packages https://git.openwrt.org/feed/packages.git
 src-git luci https://git.openwrt.org/project/luci.git
 src-git routing https://git.openwrt.org/feed/routing.git
 src-git telephony https://git.openwrt.org/feed/telephony.git
-src-git management https://git.openwrt.org/feed/management.git
 
 # 以下源通常被注释掉，按需启用
 # src-git oldpackages http://git.openwrt.org/packages.git
