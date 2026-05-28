@@ -1,8 +1,5 @@
 # 官方 feeds（GitHub 镜像，国内稳）
-src-git packages https://github.com/openwrt/packages.git
-src-git luci https://github.com/openwrt/luci.git
-src-git routing https://github.com/openwrt/routing.git
-src-git telephony https://github.com/openwrt/telephony.git
+
 
 
 # 国内镜像（可选，怕超时再开）
