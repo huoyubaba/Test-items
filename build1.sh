@@ -23,7 +23,7 @@ git_sparse_clone() {
 git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone --depth=1 https://github.com/ntlf9t/luci-app-easymesh package/luci-app-easymesh
-git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+# git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # 集合插件（kiddin9）
 git_sparse_clone main https://github.com/kiddin9/op-packages \
   luci-app-arpbind \
