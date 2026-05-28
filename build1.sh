@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# TTYD 免登录
+sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/config
 # 移除要替换的包（防止冲突）
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/packages/net/{vsftpd,vlmcsd}
