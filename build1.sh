@@ -40,5 +40,4 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-theme-argon
 git clone --depth=1 https://github.com/tohojo/sqm-scripts.git package/sqm-scripts
 
 # 应用 管理
-# git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
-git clone --depth=1 https://github.com/ophub/luci-app-appfilter package/luci-app-appfilter
+git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
