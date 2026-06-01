@@ -43,6 +43,3 @@ git clone --depth=1 https://github.com/tohojo/sqm-scripts.git package/sqm-script
 # 应用 管理
 # git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 
-make package/oaf/compile -j4
-make package/open-app-filter/compile -j4
-make package/oaf/compile -j4
