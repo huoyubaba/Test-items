@@ -42,7 +42,3 @@ git clone --depth=1 https://github.com/tohojo/sqm-scripts.git package/sqm-script
 
 # 应用 管理
 git clone -b master --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
-make package/luci-app-oaf/compile V=s
-make package/open-app-filter/compile V=s
-make package/oaf/compile V=s
-make V=s
