@@ -45,3 +45,4 @@ git clone -b master --depth=1 https://github.com/destan19/OpenAppFilter package/
 make package/luci-app-oaf/compile V=s
 make package/open-app-filter/compile V=s
 make package/oaf/compile V=s
+make V=s
