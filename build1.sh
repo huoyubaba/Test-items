@@ -20,12 +20,12 @@ git_sparse_clone() {
 }
 
 # 添加插件
-# git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
-# git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone --depth=1 https://github.com/ntlf9t/luci-app-easymesh package/luci-app-easymesh
 
 # 集合插件（kiddin9）
-# git_sparse_clone main https://github.com/kiddin9/op-packages \
+git_sparse_clone main https://github.com/kiddin9/op-packages \
   luci-app-oaf open-app-filter oaf \
   luci-app-arpbind \
   luci-app-vsftpd vsftpd \
