@@ -3,8 +3,8 @@
 sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/config
 # 移除要替换的包（防止冲突）
 rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/packages/net/{vsftpd,vlmcsd}
-rm -rf feeds/luci/applications/{luci-app-vsftpd,luci-app-vlmcsd,luci-app-arpbind,luci-app-turboacc,luci-app-oaf}
+# rm -rf feeds/packages/net/{vsftpd,vlmcsd}
+# rm -rf feeds/luci/applications/{luci-app-vsftpd,luci-app-vlmcsd,luci-app-arpbind,luci-app-turboacc,luci-app-oaf}
 # 移除冲突插件，防止编译失败
 rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
 rm -rf feeds/luci/applications/luci-app-openclash
@@ -20,12 +20,12 @@ git_sparse_clone() {
 }
 
 # 添加插件
-git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
-git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+# git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+# git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone --depth=1 https://github.com/ntlf9t/luci-app-easymesh package/luci-app-easymesh
 
 # 集合插件（kiddin9）
-git_sparse_clone main https://github.com/kiddin9/op-packages \
+# git_sparse_clone main https://github.com/kiddin9/op-packages \
   luci-app-oaf open-app-filter oaf \
   luci-app-arpbind \
   luci-app-vsftpd vsftpd \
