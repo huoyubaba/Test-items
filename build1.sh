@@ -29,6 +29,7 @@ git_sparse_clone main https://github.com/kiddin9/op-packages \
   luci-app-oaf open-app-filter oaf \
   luci-app-arpbind \
   luci-app-ramfree \
+  luci-app-accesscontrol-plus \
   luci-app-vsftpd vsftpd \
   luci-app-vlmcsd vlmcsd \
   luci-app-usb3disable \
