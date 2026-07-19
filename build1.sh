@@ -28,6 +28,7 @@ git clone --depth=1 https://github.com/ntlf9t/luci-app-easymesh package/luci-app
 git_sparse_clone main https://github.com/kiddin9/op-packages \
   luci-app-oaf open-app-filter oaf \
   luci-app-arpbind \
+  luci-app-ramfree \
   luci-app-vsftpd vsftpd \
   luci-app-vlmcsd vlmcsd \
   luci-app-usb3disable \
