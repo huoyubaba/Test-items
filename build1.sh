@@ -21,7 +21,7 @@ git_sparse_clone() {
 
 # 添加插件
 git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
-git clone --depth=1 https://github.com/chenmozhijin/turboacc.git package/turboacc
+
 git clone --depth=1 https://github.com/ntlf9t/luci-app-easymesh package/luci-app-easymesh
 
 # 集合插件（kiddin9）
@@ -33,9 +33,8 @@ git_sparse_clone main https://github.com/kiddin9/op-packages \
   luci-app-vsftpd vsftpd \
   luci-app-vlmcsd vlmcsd \
   luci-app-usb3disable \
-  luci-app-usb-printer \
-  luci-app-turboacc
-
+  luci-app-usb-printer 
+  
 # 主题 Argon
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-theme-argon
 
