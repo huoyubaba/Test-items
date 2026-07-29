@@ -34,10 +34,11 @@ git_sparse_clone main https://github.com/kiddin9/op-packages \
   luci-app-vlmcsd vlmcsd \
   luci-app-usb3disable \
   luci-app-usb-printer \
-  luci-app-turboacc
+  luci-app-turboacc \
+  luci-theme-argon
   
 # 主题 Argon
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-theme-argon
+# git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-theme-argon
 
 # turboacc管理
 # git clone --depth=1 https://github.com/chenmozhijin/turboacc.git package/turboacc
