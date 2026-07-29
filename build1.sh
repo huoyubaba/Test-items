@@ -39,6 +39,9 @@ git_sparse_clone main https://github.com/kiddin9/op-packages \
 # 主题 Argon
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-theme-argon
 
+# turboacc管理
+git clone --depth=1 https://github.com/chenmozhijin/turboacc.git package/turboacc
+
 # SQM 流量管理
 git clone --depth=1 https://github.com/tohojo/sqm-scripts.git package/sqm-scripts
 
