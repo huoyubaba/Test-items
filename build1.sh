@@ -26,7 +26,6 @@ git clone --depth=1 https://github.com/ntlf9t/luci-app-easymesh package/luci-app
 
 # 集合插件（kiddin9）
 git_sparse_clone main https://github.com/kiddin9/op-packages \
-  luci-app-oaf open-app-filter oaf \
   luci-app-arpbind \
   luci-app-ramfree \
   luci-app-accesscontrol-plus \
@@ -36,6 +35,8 @@ git_sparse_clone main https://github.com/kiddin9/op-packages \
   luci-app-usb-printer \
   luci-app-turboacc \
   luci-theme-argon
+git_sparse_clone main https://github.com/huoyubaba/op-packages \
+  luci-app-oaf open-app-filter oaf
   
 # 主题 Argon
 # git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-theme-argon
