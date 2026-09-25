@@ -35,7 +35,7 @@ git_sparse_clone main https://github.com/kiddin9/op-packages \
   luci-app-usb-printer \
   luci-app-turboacc \
   luci-theme-argon
-git_sparse_clone main https://github.com/huoyubaba/op-packages \
+git_sparse_clone oaf-6.01 https://github.com/huoyubaba/op-packages \
   luci-app-oaf open-app-filter oaf
   
 # 主题 Argon
