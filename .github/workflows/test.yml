@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: test
+name: n30pro
 
 on:
   repository_dispatch:
@@ -20,7 +20,7 @@ env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: main
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: config/test.config
+  CONFIG_FILE: config/n30pro.config
   DIY_P1_SH: build1.sh
   DIY_P2_SH: build2.sh
   UPLOAD_BIN_DIR: false
